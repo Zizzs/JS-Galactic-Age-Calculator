@@ -32,11 +32,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpg)$/,
-        loader: 'file',
-        include: './assets'
-      },
-      {
         test: /\.js$/,
         exclude: [
           /node_modules/,

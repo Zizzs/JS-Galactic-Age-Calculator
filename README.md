@@ -1,43 +1,44 @@
-# _{Application Name}_
+# _Galactic Age Calculator_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _A web application that shows the user their age and life expectancy on other planets, 1/11/2019_
 
-#### By _**{List of contributors}**_
+#### By _**Alex Williams**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_The web application has the user input their name, birthday, and various questions to calculate their age and life expectancy on seven different planets with varying orbital periods. The user can then click through the links and scroll to the appropriate page that shows the information._
 
 ## Specs
-1. User enters their age on earth, and the program outputs their age using the solar body's solar year in days.
-2. User may choose the desired solar body from a drop down to pick which planet they would want calculate their age on.
-3. User may also input their information(Activity Level, Lifestyle, etc...) to calculate the user's life expectancy on the chosen solar body.
+1. User enters their birthday, and the program outputs their age using the solar body's solar year in days.
+2. User may then click the links on the page to view all the information regarding each planet.
+3. User may also input their information(Where they live, do they eat healthy, and do they exercise) to calculate the user's life expectancy on the chosen solar body.
+4. The user may also answer if they are a dog to get their output in dog years.
 3. If the user has already surpassed the average life expectancy, the program then returns the number of years they have lived past the life expectancy.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Clone from Github_
+* _Navigate to root project directory in the terminal._
+* _Input **npm install** into the terminal to install dependancies._
+* _Input **npm run build** to build the application._
+* _Input **npm run start** to start the application._
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_Node.js is required for the npm commands to run. Must have Node.js installed. No servers are required for the running of this application._
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_No known bugs._
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_Contact me at Zizzs17@gmail.com if you have any suggestions or information regarding the web application._
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_HTML, CSS, Bootstrap, JQuery, Javascript WebPack, Node Package Manager_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT License*
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2019 **_Alex Williams_**
