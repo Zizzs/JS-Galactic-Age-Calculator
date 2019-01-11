@@ -34,8 +34,8 @@ $(document).ready(function () {
         let jupiter = new Jupiter(11.86);
         let userExcessYears;
 
-        if (userLifeExpectancy > userAge) {
-            userExcessYears = (userLifeExpectancy - userAge);
+        if (userAge - userLifeExpectancy > 0) {
+            userExcessYears = (userAge - userLifeExpectancy);
         }
         else {
             userExcessYears = 0;
@@ -48,15 +48,24 @@ $(document).ready(function () {
         let jupiterYear = jupiter.calculateYears(user.age, userLifeExpectancy, userExcessYears, jupiter.year);
 
         $('#earthInfo').text(`Your age in Earth years is ${earthYear[0]} years old! ... Obviously.`);
-        $('#earthLifeInfo').text(`Your remaining life expectancy on Earth in years is ${earthYear[1]} years!`);
         $('#mercuryInfo').text(`Your age in Mercury years is ${mercuryYear[0]} years old!`);
-        $('#mercuryLifeInfo').text(`Your remaining life expectancy on Mercury in years is ${mercuryYear[1]} years!`);
         $('#venusInfo').text(`Your age in Venus years is ${venusYear[0]} years old!`);
-        $('#venusLifeInfo').text(`Your remaining life expectancy on Venus in years is ${venusYear[1]} years!`);
         $('#marsInfo').text(`Your age in Mars years is ${marsYear[0]} years old!`);
-        $('#marsLifeInfo').text(`Your remaining life expectancy on Mars in years is ${marsYear[1]} years!`);
         $('#jupiterInfo').text(`Your age in Jupiter years is ${jupiterYear[0]} years old!`);
-        $('#jupiterLifeInfo').text(`Your remaining life expectancy on Jupiter in years is ${jupiterYear[1]} years!`);
+        if (userExcessYears === 0) {
+            $('#earthLifeInfo').text(`Your remaining life expectancy on Earth in years is ${earthYear[1]} years!`);
+            $('#mercuryLifeInfo').text(`Your remaining life expectancy on Mercury in years is ${mercuryYear[1]} years!`);
+            $('#venusLifeInfo').text(`Your remaining life expectancy on Venus in years is ${venusYear[1]} years!`);
+            $('#marsLifeInfo').text(`Your remaining life expectancy on Mars in years is ${marsYear[1]} years!`);
+            $('#jupiterLifeInfo').text(`Your remaining life expectancy on Jupiter in years is ${jupiterYear[1]} years!`);
+        }
+        else {
+            $('#earthLifeInfo').text(`You have lived ${earthYear[2]} Earth years beyond your life expectancy.`);
+            $('#mercuryLifeInfo').text(`You have lived ${mercuryYear[2]} Mercury years beyond your life expectancy.`);
+            $('#venusLifeInfo').text(`You have lived ${venusYear[2]} Venus years beyond your life expectancy.`);
+            $('#marsLifeInfo').text(`You have lived ${marsYear[2]} Mars years beyond your life expectancy.`);
+            $('#jupiterLifeInfo').text(`You have lived ${jupiterYear[2]} Jupiter years beyond your life expectancy.`);
+        }
     });
 
 
