@@ -1,4 +1,4 @@
-import { Earth, Mercury, Venus, Mars, Jupiter } from "../src/planets";
+import { Earth, Mercury, Venus, Mars, Jupiter, Naboo, Kashyyk } from "../src/js/planets";
 
 
 
@@ -31,5 +31,15 @@ describe('PlanetYears', function () {
     it('returns users age in remaining life expectancy Jupiter years', function () {
         const jupiter = new Jupiter();
         expect(jupiter.calculateYears(userAge, lifeExpectancy, excess, jupiter.year)).toEqual([4, 3, "You have not lived beyond your life expectancy."]);
+    });
+
+    it('returns users age in remaining life expectancy Naboo years', function () {
+        const naboo = new Naboo();
+        expect(naboo.calculateYears(userAge, lifeExpectancy, excess, naboo.year)).toEqual([58, 47, "You have not lived beyond your life expectancy."]);
+    });
+
+    it('returns users age in remaining life expectancy Kashyyk years', function () {
+        const kashyyk = new Kashyyk();
+        expect(kashyyk.calculateYears(userAge, lifeExpectancy, excess, kashyyk.year)).toEqual([38, 30, "You have not lived beyond your life expectancy."]);
     });
 });
