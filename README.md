@@ -35,7 +35,7 @@ _Contact me at Zizzs17@gmail.com if you have any suggestions or information rega
 
 ## Technologies Used
 
-_HTML, CSS, Bootstrap, JQuery, Javascript WebPack, Node Package Manager_
+_HTML, CSS, Bootstrap, Javascript, JQuery, Javascript WebPack, Node Package Manager_
 
 ### License
 
