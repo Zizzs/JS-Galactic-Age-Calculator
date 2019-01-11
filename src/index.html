@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Oswald" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <nav>
-        <a href="#page-1">Home</a>
-        <a href="#page-2">Earth</a>
-        <a href="#page-3">Mercury</a>
-        <a href="#page-4">Venus</a>
-        <a href="#page-5">Mars</a>
-        <a href="#page-6">Jupiter</a>
+        <a class="mainLinks" href="#page-1">Home</a>
+        <a class="mainLinks" href="#page-2">Earth</a>
+        <a class="mainLinks" href="#page-3">Mercury</a>
+        <a class="mainLinks" href="#page-4">Venus</a>
+        <a class="mainLinks" href="#page-5">Mars</a>
+        <a class="mainLinks" href="#page-6">Jupiter</a>
+        <a class="mainLinks" href="#page-7">Naboo</a>
+        <a class="mainLinks" href="#page-8">Kashyyk</a>
     </nav>
     <br>
+    <div id="mainPageHeader">
+        <p id="headerText">Galactic Age Calculator</p>
+    </div>
     <scroll-container>
         <scroll-page id="page-1">
             <div class="wrapper">
                 <div>
-                    <p>Home</p>
+                    <p id="mainTextHeader">Input your Information to output your age and life expectancy on other planets.</p>
                 </div>
                 <div>
                     <form id="userForm">
@@ -48,17 +54,20 @@
                         <label for="userExercise">Are you a dog?</label>
                         <select id="userDog">
                             <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                        </select><br>
+                            <option value="no" selected="selected">No</option>
+                        </select><br><br>
                         <button class="button" type='submit'>Submit</button>
-                    </form>
+                    </form><br>
+                    <p id="outputAlert"></p>
                 </div>
             </div>
         </scroll-page>
         <scroll-page id="page-2">
             <div class="planetWrapper">
                 <div>
-                    <p>Earth</p>
+                    <p class="planetTag">Earth</p>
+                    <p>Third planet from our sun. Our home.</p>
+                    <img class="planetImage" src='http://www.pngall.com/wp-content/uploads/2016/06/Earth-Free-Download-PNG.png'>
                 </div>
                 <div>
                     <p id="earthInfo"></p><br>
@@ -69,7 +78,9 @@
         <scroll-page id="page-3">
             <div class="planetWrapper">
                 <div>
-                    <p>Mercury</p>
+                    <p class="planetTag">Mercury</p>
+                    <p>First planet from our sun. Nice cool temperature of 801 degrees Fahrenheit.</p>
+                    <img class="planetImage" src='http://wiki.bacterialtakeover.com/images/4/41/Mercury.png'>
                 </div>
                 <div>
                     <p id="mercuryInfo"></p><br>
@@ -80,7 +91,9 @@
         <scroll-page id="page-4">
             <div class="planetWrapper">
                 <div>
-                    <p>Venus</p>
+                    <p class="planetTag">Venus</p>
+                    <p>Second planet from our sun. Our sister planet, mostly dead.</p>
+                    <img class="planetImage" src='https://www.scmp.com/sites/default/files/images/methode/2017/01/04/5d05bfde-d23a-11e6-86a3-82dfe61732b8_image_hires.png'>
                 </div>
                 <div>
                     <p id="venusInfo"></p><br>
@@ -91,7 +104,9 @@
         <scroll-page id="page-5">
             <div class="planetWrapper">
                 <div>
-                    <p>Mars</p>
+                    <p class="planetTag">Mars</p>
+                    <p>Fourth planet from our sun. Maybe Elon Musk will let us move here soon.</p>
+                    <img class="planetImage" src='https://c1.staticflickr.com/9/8556/30055660701_c1c725cdba_o.png'>
                 </div>
                 <div>
                     <p id="marsInfo"></p><br>
@@ -102,11 +117,39 @@
         <scroll-page id="page-6">
             <div class="planetWrapper">
                 <div>
-                    <p>Jupiter</p>
+                    <p class="planetTag">Jupiter</p>
+                    <p>Fifth planet from our sun. Just a big ball of angry gas.</p>
+                    <img class="planetImage" src='https://space-facts.com/wp-content/uploads/jupiter.png'>
                 </div>
                 <div>
                     <p id="jupiterInfo"></p><br>
                     <p id="jupiterLifeInfo"></p><br>
+                </div>
+            </div>
+        </scroll-page>
+        <scroll-page id="page-7">
+            <div class="planetWrapper">
+                <div>
+                    <p class="planetTag">Naboo</p>
+                    <p>A planet located in the Mid Rim of the Galaxy. Major galactic faction.</p>
+                    <img class="planetImage" src='https://vignette.wikia.nocookie.net/starwars/images/4/41/Naboo_FFGRebellion.png/revision/latest?cb=20170529051916'>
+                </div>
+                <div>
+                    <p id="nabooInfo"></p><br>
+                    <p id="nabooLifeInfo"></p><br>
+                </div>
+            </div>
+        </scroll-page>
+        <scroll-page id="page-8">
+            <div class="planetWrapper">
+                <div>
+                    <p class="planetTag">Kashyyk</p>
+                    <p>A jungle world. Home of the Wookies.</p>
+                    <img class="planetImage" src='https://vignette.wikia.nocookie.net/starwars/images/d/d0/Kashyyyk_FFGRebellion.png/revision/latest?cb=20170529040615'>
+                </div>
+                <div>
+                    <p id="kashyykInfo"></p><br>
+                    <p id="kashyykLifeInfo"></p><br>
                 </div>
             </div>
         </scroll-page>

@@ -47,3 +47,15 @@ export class Jupiter extends PlanetYears {
         super(11.86);
     }
 }
+
+export class Naboo extends PlanetYears {
+    constructor() {
+        super(.85);
+    }
+}
+
+export class Kashyyk extends PlanetYears {
+    constructor() {
+        super(1.3);
+    }
+}

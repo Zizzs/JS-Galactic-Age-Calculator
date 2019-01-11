@@ -1,3 +1,4 @@
+
 a {
     display: inline-block;
     width: 100px;
@@ -9,17 +10,20 @@ nav, scroll-container {
     text-align: center;
 }
 nav {
-    width: 800px;
+    width: 900px;
     padding: 5px;
     border: 1px solid black;
+    background-color: black;
+    border-radius: 15px;
 }
 scroll-container {
     display: block;
-    width: 1200px;
-    height: 800px;
+    width: 800px;
+    height: 650px;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    background-color: white;
+    background-color: black;
+    color: white;
 }
 scroll-page {
     display: flex;
@@ -42,5 +46,76 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Oswald', sans-serif;
 }
 
+.planetImage {
+    width: 300px;
+    height: 300px;
+}
+
+.mainLinks {
+    font-family: 'Anton', sans-serif;
+    color: white;
+}
+
+.planetTag {
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+}
+
+#mainTextHeader {
+    padding-bottom: 150px;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+#mainPageHeader {
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-family: 'Anton', sans-serif;
+    background-color: black;
+}
+
+#headerText {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #471f60; 
+    border-radius: 10px;
+}
+
+input, option, select, button{
+    background-color: #0a0630;
+    color: white;
+}
+
+input:focus {
+    background-color: #0a0630;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid white;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #0a0630 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

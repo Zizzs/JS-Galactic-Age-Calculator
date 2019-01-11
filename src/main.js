@@ -3,12 +3,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { User } from './js/user';
-import { Mercury, Venus, Mars, Jupiter, Earth } from './js/planets';
-import Image from './assets/galaxy.jpg';
-
-let galaxy = new Image();
-galaxy.src = Image;
-Element.appendChild(galaxy);
+import { Mercury, Venus, Mars, Jupiter, Earth, Naboo, Kashyyk } from './js/planets';
 
 $(document).ready(function () {
 
@@ -36,11 +31,14 @@ $(document).ready(function () {
             user.age *= 7;
         console.log(currentYear);
         console.log(userBirthYear);
-        let mercury = new Mercury(.24);
-        let venus = new Venus(.62);
-        let earth = new Earth(1);
-        let mars = new Mars(1.88);
-        let jupiter = new Jupiter(11.86);
+        const mercury = new Mercury();
+        const venus = new Venus();
+        const earth = new Earth();
+        const mars = new Mars();
+        const jupiter = new Jupiter();
+        const naboo = new Naboo();
+        const kashyyk = new Kashyyk();
+        
 
         if (user.age - user.lifeExpectancy > 0) {
             user.excessYears = (user.age - user.lifeExpectancy);
@@ -54,18 +52,24 @@ $(document).ready(function () {
         let venusYear = venus.calculateYears(user.age, user.lifeExpectancy, user.excessYears, venus.year);
         let marsYear = mars.calculateYears(user.age, user.lifeExpectancy, user.excessYears, mars.year);
         let jupiterYear = jupiter.calculateYears(user.age, user.lifeExpectancy, user.excessYears, jupiter.year);
+        let nabooYear = naboo.calculateYears(user.age, user.lifeExpectancy, user.excessYears, naboo.year);
+        let kashyykYear = kashyyk.calculateYears(user.age, user.lifeExpectancy, user.excessYears, kashyyk.year);
 
         $('#earthInfo').text(`Your age in Earth years is ${earthYear[0]} years old! ... Obviously.`);
         $('#mercuryInfo').text(`Your age in Mercury years is ${mercuryYear[0]} years old!`);
         $('#venusInfo').text(`Your age in Venus years is ${venusYear[0]} years old!`);
         $('#marsInfo').text(`Your age in Mars years is ${marsYear[0]} years old!`);
         $('#jupiterInfo').text(`Your age in Jupiter years is ${jupiterYear[0]} years old!`);
+        $('#nabooInfo').text(`Your age in Naboo years is ${nabooYear[0]} years old!`);
+        $('#kashyykInfo').text(`Your age in Kashyyk years is ${kashyykYear[0]} years old!`);
         if (user.excessYears === 0) {
             $('#earthLifeInfo').text(`Your remaining life expectancy on Earth in years is ${earthYear[1]} years!`);
             $('#mercuryLifeInfo').text(`Your remaining life expectancy on Mercury in years is ${mercuryYear[1]} years!`);
             $('#venusLifeInfo').text(`Your remaining life expectancy on Venus in years is ${venusYear[1]} years!`);
             $('#marsLifeInfo').text(`Your remaining life expectancy on Mars in years is ${marsYear[1]} years!`);
             $('#jupiterLifeInfo').text(`Your remaining life expectancy on Jupiter in years is ${jupiterYear[1]} years!`);
+            $('#nabooLifeInfo').text(`Your remaining life expectancy on Naboo in years is ${nabooYear[1]} years!`);
+            $('#kashyykLifeInfo').text(`Your remaining life expectancy on Kashyyk in years is ${kashyykYear[1]} years!`);
         }
         else {
             $('#earthLifeInfo').text(`You have lived ${earthYear[2]} Earth years beyond your life expectancy.`);
@@ -73,7 +77,11 @@ $(document).ready(function () {
             $('#venusLifeInfo').text(`You have lived ${venusYear[2]} Venus years beyond your life expectancy.`);
             $('#marsLifeInfo').text(`You have lived ${marsYear[2]} Mars years beyond your life expectancy.`);
             $('#jupiterLifeInfo').text(`You have lived ${jupiterYear[2]} Jupiter years beyond your life expectancy.`);
+            $('#nabooLifeInfo').text(`Your remaining life expectancy on Naboo in years is ${nabooYear[1]} years!`);
+            $('#kashyykLifeInfo').text(`Your remaining life expectancy on Kashyyk in years is ${kashyykYear[1]} years!`);
         }
+
+        $('#outputAlert').text("Your information has been calculated.");
     });
 
 
