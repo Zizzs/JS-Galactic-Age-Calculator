@@ -9,7 +9,48 @@
 </head>
 
 <body>
-
+    <nav>
+        <a href="#page-1">Home</a>
+        <a href="#page-2">Earth</a>
+        <a href="#page-3">Mercury</a>
+        <a href="#page-4">Venus</a>
+        <a href="#page-5">Mars</a>
+        <a href="#page-6">Jupiter</a>
+    </nav>
+    <br>
+    <scroll-container>
+        <scroll-page id="page-1">
+            <div class="wrapper">
+                <div>
+                    <p>Home</p>
+                </div>
+                <div>
+                    <form id="userForm">
+                        <label for="userName">Enter your Name:</label>
+                        <input id="userName" type="text" required></input><br>
+                        <label for="userAge">Enter your Age:</label>
+                        <input id="userAge" type="text" required></input><br>
+                        <button class="button" type='submit'>Submit</button>
+                    </form>
+                </div>
+            </div>
+        </scroll-page>
+        <scroll-page id="page-2">
+            <p>Earth</p>
+        </scroll-page>
+        <scroll-page id="page-3">
+            <p>Mercury</p>
+        </scroll-page>
+        <scroll-page id="page-4">
+            <p>Venus</p>
+        </scroll-page>
+        <scroll-page id="page-5">
+            <p>Mars</p>
+        </scroll-page>
+        <scroll-page id="page-6">
+            <p>Jupiter</p>
+        </scroll-page>
+    </scroll-container>
 </body>
 
 </html>
