@@ -3,10 +3,17 @@ export class PlanetYears {
         this.year = year;
     }
 
-    calculateYears(age, lifeExpectancy, planetYear) {
+    calculateYears(age, lifeExpectancy, excessYears, planetYear) {
+        let excess;
         const remainingLife = Math.floor((lifeExpectancy - age) / planetYear);
         const userAge = Math.floor(age / planetYear);
-        const arr = [userAge, remainingLife];
+        if (excessYears !== 0) {
+            excess = Math.floor(excessYears / planetYear);
+        }
+        else {
+            excess = "You have not lived beyond your life expectancy."
+        }
+        const arr = [userAge, remainingLife, excess];
         return arr;
     }
 }

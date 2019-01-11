@@ -32,12 +32,20 @@ $(document).ready(function () {
         let earth = new Earth(1);
         let mars = new Mars(1.88);
         let jupiter = new Jupiter(11.86);
+        let userExcessYears;
 
-        let earthYear = earth.calculateYears(user.age, userLifeExpectancy, earth.year);
-        let mercuryYear = mercury.calculateYears(user.age, userLifeExpectancy, mercury.year);
-        let venusYear = venus.calculateYears(user.age, userLifeExpectancy, venus.year);
-        let marsYear = mars.calculateYears(user.age, userLifeExpectancy, mars.year);
-        let jupiterYear = jupiter.calculateYears(user.age, userLifeExpectancy, jupiter.year);
+        if (userLifeExpectancy > userAge) {
+            userExcessYears = (userLifeExpectancy - userAge);
+        }
+        else {
+            userExcessYears = 0;
+        }
+
+        let earthYear = earth.calculateYears(user.age, userLifeExpectancy, userExcessYears, earth.year);
+        let mercuryYear = mercury.calculateYears(user.age, userLifeExpectancy, userExcessYears, mercury.year);
+        let venusYear = venus.calculateYears(user.age, userLifeExpectancy, userExcessYears, venus.year);
+        let marsYear = mars.calculateYears(user.age, userLifeExpectancy, userExcessYears, mars.year);
+        let jupiterYear = jupiter.calculateYears(user.age, userLifeExpectancy, userExcessYears, jupiter.year);
 
         $('#earthInfo').text(`Your age in Earth years is ${earthYear[0]} years old! ... Obviously.`);
         $('#earthLifeInfo').text(`Your remaining life expectancy on Earth in years is ${earthYear[1]} years!`);
