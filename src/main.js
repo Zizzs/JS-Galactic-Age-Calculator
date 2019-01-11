@@ -5,6 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { User } from './js/user';
 import { Mercury, Venus, Mars, Jupiter, Earth, Naboo, Kashyyk } from './js/planets';
 
+let root = document.getElementsByTagName('body');
+document.addEventListener('resize', () => {
+    root.style.setProperty('--screen-x', window.screenX);
+    root.style.setProperty('--screen-y', window.screenY);
+})
+
 $(document).ready(function () {
 
     $('#userForm').submit(function (event) {
