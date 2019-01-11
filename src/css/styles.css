@@ -19,6 +19,7 @@ scroll-container {
     height: 800px;
     overflow-y: scroll;
     scroll-behavior: smooth;
+    background-color: white;
 }
 scroll-page {
     display: flex;
@@ -35,3 +36,11 @@ scroll-page {
 .planetWrapper {
     display: grid;
 }
+
+body {
+    background-image: url("../assets/galaxy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
