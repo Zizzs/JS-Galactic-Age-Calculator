@@ -48,7 +48,7 @@ $(document).ready(function () {
         $('#marsInfo').text(`Your age in Mars years is ${marsYear[0]} years old!`);
         $('#marsLifeInfo').text(`Your remaining life expectancy on Mars in years is ${marsYear[1]} years!`);
         $('#jupiterInfo').text(`Your age in Jupiter years is ${jupiterYear[0]} years old!`);
-        $('#jupiterLifeInfo').prepend(`Your remaining life expectancy on Jupiter in years is ${jupiterYear[1]} years!`);
+        $('#jupiterLifeInfo').text(`Your remaining life expectancy on Jupiter in years is ${jupiterYear[1]} years!`);
     });
 
 

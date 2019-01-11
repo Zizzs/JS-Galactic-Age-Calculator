@@ -4,7 +4,6 @@ export class PlanetYears {
     }
 
     calculateYears(age, lifeExpectancy, planetYear) {
-        debugger;
         const remainingLife = Math.floor((lifeExpectancy - age) / planetYear);
         const userAge = Math.floor(age / planetYear);
         const arr = [userAge, remainingLife];

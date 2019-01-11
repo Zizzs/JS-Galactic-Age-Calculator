@@ -2,39 +2,33 @@ import { Earth, Mercury, Venus, Mars, Jupiter } from "../src/planets";
 
 
 
-describe('RPG', function () {
+describe('PlanetYears', function () {
 
-    let userAge = 0;
-    afterEach(function () {
-        userAge = 0;
-    });
+    let userAge = 50;
+    let lifeExpectancy = 90
+
     it('returns users age in Earth years', function () {
-        userAge = 50
         const earth = new Earth();
-        expect(earth.calculateEarthYears(userAge, earth.year)).toEqual(50);
+        expect(earth.calculateYears(userAge, lifeExpectancy, earth.year)).toEqual([50, 40]);
     });
 
     it('returns users age in Mercury years', function () {
-        userAge = 50
         const mercury = new Mercury();
-        expect(mercury.calculateMercuryYears(userAge, mercury.year)).toEqual(208);
+        expect(mercury.calculateYears(userAge, lifeExpectancy, mercury.year)).toEqual([208, 166]);
     });
 
     it('returns users age in Venus years', function () {
-        userAge = 50
         const venus = new Venus();
-        expect(venus.calculateVenusYears(userAge, venus.year)).toEqual(80);
+        expect(venus.calculateYears(userAge, lifeExpectancy, venus.year)).toEqual([80, 64]);
     });
 
     it('returns users age in Mars years', function () {
-        userAge = 50
         const mars = new Mars();
-        expect(mars.calculateMarsYears(userAge, mars.year)).toEqual(26);
+        expect(mars.calculateYears(userAge, lifeExpectancy, mars.year)).toEqual([26, 21]);
     });
 
     it('returns users age in Jupiter years', function () {
-        userAge = 50
         const jupiter = new Jupiter();
-        expect(jupiter.calculateJupiterYears(userAge, jupiter.year)).toEqual(4);
+        expect(jupiter.calculateYears(userAge, lifeExpectancy, jupiter.year)).toEqual([4, 3]);
     });
 });
